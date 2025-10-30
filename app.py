@@ -194,7 +194,7 @@ try:
         GITHUB_TOKEN = os.environ["GH_TOKEN"]
 except Exception:
     GITHUB_TOKEN = os.environ.get("GH_TOKEN", "")
-GITHUB_REPO = "Lucas2882-byte/gestion-fiches"
+GITHUB_REPO = "Lucas2882-byte/gestion_fourni"
 GITHUB_BRANCH = "main"
 GITHUB_API_URL = f"https://api.github.com/repos/{GITHUB_REPO}/contents"
 
