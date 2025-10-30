@@ -674,7 +674,7 @@ if st.session_state.admin_mode:
             desc = st.text_area("Descriptif")
             obs = st.text_area("Observations")
             
-            assigne_a = st.selectbox("👤 Assigner à", ["", "alex", "olaf", "leiko", "teiko", "gerald"], key="add_assign")
+            assigne_a = st.selectbox("👤 Assigner à", ["", "alex", "olaf", "leiko", "teiko", "gerald", "fournigoogle", "fourniavis"], key="add_assign")
             
             # Nouveaux champs
             type_fiche = st.selectbox("Type", options=["valide", "red", "bateau","bateau2"], key="add_type_fiche")
@@ -724,7 +724,7 @@ if st.session_state.admin_mode:
                 fiche_data["dernier_avis"] = st.date_input("Dernier avis", value=parse_date(fiche_data["dernier_avis"]), key="mod_dernier")
                 fiche_data["prochain_avis"] = st.date_input("Prochain avis", value=parse_date(fiche_data["prochain_avis"]), key="mod_prochain")
                 fiche_data["delai"] = st.number_input("Délai", value=int(fiche_data.get("delai", 1)), min_value=1, key="mod_delai")
-                assignables = ["", "alex", "olaf", "leiko", "teiko", "gerald"]
+                assignables = ["", "alex", "olaf", "leiko", "teiko", "gerald", "fournigoogle", "fourniavis"]
                 valeur_actuelle = fiche_data.get("assigne_a")
                 if not isinstance(valeur_actuelle, str):
                     valeur_actuelle = ""
